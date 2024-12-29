@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Orel IT</title>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <style>
             .header{
                 background-color:whitesmoke;
@@ -16,6 +17,7 @@
             }
             .motto{
                 font-size: 60px;
+                font-family:Arial, Helvetica, sans-serif;
                 position: absolute;
                 top: 50%;
                 bottom: 50%;
@@ -25,6 +27,25 @@
                 text-decoration: underline;
                 text-decoration-color:red;
             }
+            .content{
+                display:grid;
+                align-items:center;
+                grid-template-columns: 1fr 1fr ;
+                column-gap: 10px;
+                padding-right: 100px;
+                padding-left: 100px;
+            }  
+            .video{
+                height:fit-content;
+                width:fit-content;
+                position:relative;
+            }  
+            .para{
+                font-family: sans-serif;
+                font-size: 18px;
+                text-align: justify;
+            }
+
             </style>
     </head>
     <body>
@@ -63,6 +84,59 @@
                 <u class="child-element">to Empower Humanity.</u>
             </div>
         </div>
+        <h1 style="text-align: center;">AT OREL IT, WE DON'T JUST SEE TECHNOLOGY AS TOOLS; WE SEE IT AS A</h1>
+        <h1 style="text-align: center;">TRANSFORMATIVE FORCE FOR GOOD.</h1>
+        <div class="content">
+            <div class="video">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <iframe src="https://www.youtube.com/embed/CKANtLWYCtY?si=Vb7JMsXWILQgXVNP" >
+                </iframe>
+            </div>
+            <div>
+                <p class="para">It’s about pushing the boundaries of AI, data science, and cloud computing to unlock potential and create a brighter future. We become your innovation partners, collaborating across industries to tackle challenges and turn your ideas into reality.
+                <br><br>   
+                From building secure data centers to crafting immersive experiences, our comprehensive suite of services empowers you to thrive in the digital age. Whether you’re looking to streamline operations, gain deeper insights from your data, or connect with your audience in groundbreaking ways, OREL IT is here to guide you. Join us on this journey to empower humanity, one technological leap at a time.</p>
+            </div>
+        </div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+            </div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 3, // Show 3 slides at a time
+                spaceBetween: 20, // Space between slides
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    // When window width is <= 768px
+                    768: {
+                        slidesPerView: 1, // Show 1 slide on smaller screens
+                    }
+                }
+            });
+        </script>
+
     </body>
 </html>
 
