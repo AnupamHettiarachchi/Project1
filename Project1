@@ -125,7 +125,6 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-              <!-- Each card -->
               <div class="swiper-slide">
                 <div class="card">
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr3RTmUK6M97o-k2B8wD2nsJaZPkEEM2_C5w&s">
@@ -155,7 +154,6 @@
                 </div>
               </div>
             </div>
-            <!-- Navigation Buttons -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
@@ -163,22 +161,21 @@
         <script>
   document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3, // Show 3 cards
-      spaceBetween: 20, // Add space between cards
+      slidesPerView: 3, 
+      spaceBetween: 20, 
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-        // Adjust cards for smaller screens
         768: {
-          slidesPerView: 1, // Show 1 card
+          slidesPerView: 1, 
         },
         1024: {
-          slidesPerView: 2, // Show 2 cards
+          slidesPerView: 2, 
         },
         1440: {
-          slidesPerView: 3, // Show 3 cards
+          slidesPerView: 3, 
         },
       },
     });
@@ -188,6 +185,8 @@
 <footer>
   <img src="Screenshot 2025-01-02 085044.png" width="100%" height="200px"> 
 </footer>
+
+
 
     </body>
 </html>
