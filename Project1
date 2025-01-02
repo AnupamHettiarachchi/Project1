@@ -45,7 +45,28 @@
                 font-size: 18px;
                 text-align: justify;
             }
-
+            .swiper-container {
+                width: 100%;
+                padding: 20px 0;
+            }
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .card {
+                width: 90%; /* Adjust to fit your design */
+                background-color: white;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            .slide-content{
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
             </style>
     </head>
     <body>
@@ -99,43 +120,74 @@
                 From building secure data centers to crafting immersive experiences, our comprehensive suite of services empowers you to thrive in the digital age. Whether you’re looking to streamline operations, gain deeper insights from your data, or connect with your audience in groundbreaking ways, OREL IT is here to guide you. Join us on this journey to empower humanity, one technological leap at a time.</p>
             </div>
         </div>
+        <br>
 
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
+              <!-- Each card -->
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr3RTmUK6M97o-k2B8wD2nsJaZPkEEM2_C5w&s">
+                  <p class="slide-content">OREL Cloud empowers the ICT Industry...</p>
+                  <p class="slide-content">December 6,2023</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsCD_NuqpuiXDwnhrQ_P-gf8ZjS0zIldv7bA&s">
+                  <p class="slide-content">OREL Cloud: Shaping the future of IT in Sri Lanka...</p>
+                  <p class="slide-content">November 1,2023</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="https://www.orelit.com/wp-content/uploads/2023/10/zxczxczxc-1024x671.png" height="165px" width="300px">
+                  <p class="slide-content">OREL IT strengthens its presence in Dubai...</p>
+                  <p class="slide-content">October 29,2023</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                    <img src="https://www.orelit.com/wp-content/uploads/2023/10/OREL-IT-at-GITEX-Dubai-2023-scaled.jpg" height="165px" width="300px">
+                    <p class="slide-content">OREL IT makes big waves at GITEX Global...</p>
+                    <p class="slide-content">October 23,2023</p>
+                </div>
+              </div>
             </div>
-            <!-- Add Navigation -->
+            <!-- Navigation Buttons -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
+          </div>
     
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>
-            const swiper = new Swiper('.swiper-container', {
-                slidesPerView: 3, // Show 3 slides at a time
-                spaceBetween: 20, // Space between slides
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    // When window width is <= 768px
-                    768: {
-                        slidesPerView: 1, // Show 1 slide on smaller screens
-                    }
-                }
-            });
-        </script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3, // Show 3 cards
+      spaceBetween: 20, // Add space between cards
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        // Adjust cards for smaller screens
+        768: {
+          slidesPerView: 1, // Show 1 card
+        },
+        1024: {
+          slidesPerView: 2, // Show 2 cards
+        },
+        1440: {
+          slidesPerView: 3, // Show 3 cards
+        },
+      },
+    });
+  });
+</script>
+
+<footer>
+  <img src="Screenshot 2025-01-02 085044.png" width="100%" height="200px"> 
+</footer>
 
     </body>
 </html>
