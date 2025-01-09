@@ -3,7 +3,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-/* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -26,9 +25,29 @@
     background-color:whitesmoke;
     height:95px;
     width:100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease, line-height 0.3s ease;
+}
+header.small {
+    height: 60px;
+}
+.header img {
+    height: 70px;
+    transition: height 0.3s ease;
+}
+.header.small img {
+    height: 45px;
 }
 .headings{
   padding-left: 1020px;
+  transition: padding 0.3s ease;
+}
+.header.small .headings {
+    padding-top: 10px;
 }
 a:hover {
     font-weight: bolder;
@@ -114,12 +133,13 @@ button.swiper-button-prev, button.swiper-button-next {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  color: white;
 }
 button.swiper-button-prev {
-  left: 10px;
+  left: -30px;
 }
 button.swiper-button-next {
-  right: 10px;
+  right: -30px;
 }
 button:focus {
   outline: none;
